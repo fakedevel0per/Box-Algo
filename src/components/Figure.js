@@ -11,7 +11,7 @@ const Figure = (props) => {
       table += '<tr>';
       for (let j = 0; j < col; j++) {
         if (i === j) {
-          table = table + '<td style="background-color : '+color+';"></td>';
+          table = table + '<td style="background-color : ' + color + ';"></td>';
         } else {
           table = table + '<td></td>';
         }
@@ -23,9 +23,8 @@ const Figure = (props) => {
 
   return (
     <div>
-      you got {props.input.Rows} X {props.input.Columns} figure with {props.color} Diagonals
+      {/* you got {props.input.Rows} X {props.input.Columns} figure with {props.color} Diagonals */}
       <table dangerouslySetInnerHTML={{ __html: createBox(props.input.Rows, props.input.Columns, props.color) }}></table>
-      {/* <table><tr><td></td><td></td></tr><tr><td></td><td></td></tr></table> */}
     </div>
   )
 }
