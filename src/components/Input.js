@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Input = (props) => {
+  const tempRows = '';
+  const tempCols = '';
     const onInput=(e)=>{
         props.setInput({...props.input, [e.target.name]: e.target.value})
     }
