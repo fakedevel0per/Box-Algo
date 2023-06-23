@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Figure from './components/Figure';
+import Input from './components/Input';
 
 function App() {
+  const [input, setInput] = useState({Rows: '', Columns: ''});
+  const [color, setColor] = useState('#ff0000');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <h2>Enter Rows and Columns to Print</h2>
+      <Input setColor={setColor} setInput={setInput} input={input} color={color}/>
+      <Figure input={input} color={color}/>
     </div>
   );
 }
